@@ -1,14 +1,10 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 
-class Shows extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location} >
-        <p> lovely shows</p>
-      </Layout>
-    )
-  }
-}
+const Shows = props => (
+  <Layout location={props.location}>
+    <p> lovely Shows</p>
+  </Layout>
+);
 
-export default Shows
+export default Shows;

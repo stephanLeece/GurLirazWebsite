@@ -1,14 +1,10 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 
-class Videos extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location} >
-        <p> lovely videos</p>
-      </Layout>
-    )
-  }
-}
+const Videos = props => (
+  <Layout location={props.location}>
+    <p> lovely Videos</p>
+  </Layout>
+);
 
-export default Videos
+export default Videos;

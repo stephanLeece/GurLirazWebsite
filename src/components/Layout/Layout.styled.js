@@ -17,7 +17,6 @@ const RootWrap = styled.div`
     width: 100%;
     margin-top: 132px;
     padding: 16px;
-    transition: all 1s ease-in;
 `;
 
 const NavBar = styled.div`

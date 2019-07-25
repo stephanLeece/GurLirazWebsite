@@ -1,28 +1,10 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
 
-class RootIndex extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location} >
-        <p>a lovely page</p>
-      </Layout>
-    )
-  }
-}
+const Home = props => (
+  <Layout location={props.location}>
+    <p> lovely Home</p>
+  </Layout>
+);
 
-export default RootIndex
-
-export const contentfulQuery = graphql`
-query ContentfulQuery {
-  allContentfulAboutDummy {
-    edges {
-      node {
-        aboutTitle
-        aboutText
-      }
-    }
-  }
-}
-`
+export default Home;
