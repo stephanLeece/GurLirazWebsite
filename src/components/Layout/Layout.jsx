@@ -1,6 +1,8 @@
 import React, { forwardRef } from "react";
 
-import TransitionLink, { TransitionPortal } from "gatsby-plugin-transition-link";
+import TransitionLink, {
+  TransitionPortal
+} from "gatsby-plugin-transition-link";
 import { Reset } from "styled-reset";
 import { GlobalStyle, RootWrap, NavBar } from "./Layout.styled";
 
@@ -30,14 +32,8 @@ const Layout = forwardRef((props, ref) => (
           </TransitionLink>
           <TransitionLink
             to="/videos"
-            exit={{
-              trigger: ({ exit, node }) =>
-                this.interestingExitAnimation(exit, node),
-              length: 1
-            }}
-            entry={{
-              delay: 0.6
-            }}
+            exit={{ length: 0.5 }}
+            entry={{ delay: 0.5 }}
           >
             Go to videos
           </TransitionLink>
