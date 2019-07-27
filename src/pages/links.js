@@ -1,10 +1,15 @@
 import React from "react";
-import Layout from "../components/Layout";
+
+import AppWrapper from "../components/AppWrapper";
+import { H1, H2, H3, P } from "../components/Typography";
 
 const Links = props => (
-  <Layout location={props.location}>
-    <p> lovely links</p>
-  </Layout>
+  <AppWrapper location={props.location}>
+    <H1> lovely h1</H1>
+    <H2> lovely h2</H2>
+    <H3> lovely h3</H3>
+    <P> lovely h4</P>
+  </AppWrapper>
 );
 
 export default Links;

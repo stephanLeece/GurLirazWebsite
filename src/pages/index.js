@@ -1,10 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
+
+import AppWrapper from "../components/AppWrapper";
 
 const Home = props => (
-  <Layout location={props.location}>
+  <AppWrapper location={props.location}>
     <p> lovely Home</p>
-  </Layout>
+  </AppWrapper>
 );
 
 export default Home;
