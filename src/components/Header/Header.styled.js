@@ -6,6 +6,7 @@ import { BREAK_POINTS } from "../../constants/BreakPoints";
 
 const Wrap = styled.div`
   width: 100vw;
+  background: white;
 `;
 
 const Grid = styled(GridWrap)`
@@ -13,9 +14,9 @@ const Grid = styled(GridWrap)`
   margin: 0;
   grid-template-areas:
     " aboutLink aboutLink aboutLink aboutLink "
-    " showsLink videosLink contactLink . ";
+    " showsLink showsLink videosLink videosLink ";
   @media ${BREAK_POINTS.laptop} {
-    grid-template-areas: " aboutLink aboutLink aboutLink aboutLink aboutLink aboutLink showsLink showsLink videosLink videosLink contactLink contactLink";
+    grid-template-areas: " aboutLink aboutLink aboutLink aboutLink aboutLink aboutLink showsLink showsLink showsLink videosLink videosLink videosLink ";
   }
 `;
 
@@ -39,13 +40,6 @@ const LinkWrap = styled(TransitionLink)`
   }
   &:nth-of-type(3) {
     grid-area: videosLink;
-  }
-  &:nth-of-type(4) {
-    grid-area: contactLink;
-    margin-right: 8px;
-    @media ${BREAK_POINTS.laptop} {
-      margin-right: 16px;
-    }
   }
 `;
 

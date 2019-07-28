@@ -19,9 +19,6 @@ const Header = ({ className }) => (
         <LinkWrap to="/videos" exit={{ length: 0.5 }}>
           Videos
         </LinkWrap>
-        <LinkWrap to="/contact" exit={{ length: 0.5 }}>
-          Contact
-        </LinkWrap>
       </Grid>
     </Wrap>
   </TransitionPortal>
