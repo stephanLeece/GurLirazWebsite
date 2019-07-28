@@ -6,7 +6,6 @@ import {
   RootWrap,
   Head,
   PageTransitionWrap,
-  Grid,
 } from "./AppWrapper.styled";
 
 const Layout = props => (
@@ -16,9 +15,7 @@ const Layout = props => (
     <RootWrap {...props}>
       <Head />
       <PageTransitionWrap>
-        <Grid>
           {props.children}
-        </Grid>
       </PageTransitionWrap>
     </RootWrap>
   </React.Fragment>

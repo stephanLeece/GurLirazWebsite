@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { BREAK_POINTS } from "../constants/BreakPoints";
-import GridWrap from "../components/GridWrap";
+import { BREAK_POINTS } from "../../constants/BreakPoints";
+import GridWrap from "../../components/GridWrap";
 
 const Grid = styled(GridWrap)`
   margin: 0;
@@ -9,7 +9,7 @@ const Grid = styled(GridWrap)`
 
 const Carousel = styled.div`
   margin: 0 -5%;
-  padding: 0 16px;
+  padding: 0 5%;
   border: 1px solid black;
   grid-column: 1 / -1;
   overflow-x: auto;
@@ -35,7 +35,7 @@ const Slide = styled.div`
   scroll-snap-align: center;
   margin: 16px;
   &:last-of-type {
-    padding-right: 10%;
+    padding-right: 7.5%;
   }
   @media ${BREAK_POINTS.laptop} {
     margin: 16px;

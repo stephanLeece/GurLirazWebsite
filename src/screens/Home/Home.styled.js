@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import { BREAK_POINTS } from "../constants/BreakPoints";
-import GridWrap from "../components/GridWrap";
+import { BREAK_POINTS } from "../../constants/BreakPoints";
+import GridWrap from "../../components/GridWrap";
 
 const Grid = styled(GridWrap)``;
 

@@ -4,7 +4,6 @@ import { BREAK_POINTS } from "../../constants/BreakPoints";
 
 import PageTransitionWrapper from "../PageTransitionWrapper";
 import Header from "../Header";
-import GridWrap from "../GridWrap";
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -27,14 +26,8 @@ const Head = styled(Header)`
   }
 `;
 
-const Grid = styled(GridWrap)`
-  > * {
-    grid-column: 1 / -1;
-  }
-`;
-
 const PageTransitionWrap = styled(PageTransitionWrapper)`
   margin-top: 24px;
 `;
 
-export { GlobalStyle, RootWrap, Head, Grid, PageTransitionWrap };
+export { GlobalStyle, RootWrap, Head, PageTransitionWrap };
