@@ -1,7 +1,7 @@
 import React from "react";
 
 import AppWrapper from "../components/AppWrapper";
-import { Grid, AboutSection, ContactSection } from "./index.styled";
+import { Grid, AboutSection, ContactSection } from "../screens/home.styled";
 import DummyContact from "./Assets/dummyContact.png";
 
 const Home = props => (

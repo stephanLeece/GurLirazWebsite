@@ -2,7 +2,7 @@ import React from "react";
 
 import AppWrapper from "../components/AppWrapper";
 import DummyVideoImg from "./Assets/dummyVideo.png";
-import { Grid, Carousel, Slide, DummyVideo } from "./videos.styled";
+import { Grid, Carousel, Slide, DummyVideo } from "../screens/videos.styled";
 
 const Videos = props => (
   <AppWrapper location={props.location}>

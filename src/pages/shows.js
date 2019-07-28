@@ -1,7 +1,7 @@
 import React from "react";
 
 import AppWrapper from "../components/AppWrapper";
-import { Grid, ShowList, ShowCard } from "./shows.styled";
+import { Grid, ShowList, ShowCard } from "../screens/shows.styled";
 
 const Shows = props => (
   <AppWrapper location={props.location}>
