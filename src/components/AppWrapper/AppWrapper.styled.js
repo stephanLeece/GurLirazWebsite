@@ -34,10 +34,7 @@ const Grid = styled(GridWrap)`
 `;
 
 const PageTransitionWrap = styled(PageTransitionWrapper)`
-  margin-top: ${HEADER_HEIGHT_MOBILE + 24}px;
-  @media ${BREAK_POINTS.laptop} {
-    margin-top: ${HEADER_HEIGHT_DESKTOP + 24}px;
-  }
+  margin-top: 24px;
 `;
 
 export { GlobalStyle, RootWrap, Head, Grid, PageTransitionWrap };

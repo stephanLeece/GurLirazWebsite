@@ -2,11 +2,20 @@ import styled from "styled-components";
 
 import { BREAK_POINTS } from "../constants/BreakPoints";
 import GridWrap from "../components/GridWrap";
+import { EDEADLK } from "constants";
 
 const Grid = styled(GridWrap)``;
 
+const ShowSection = styled.div`
+   grid-column: auto / span 6;
+`;
+
+const Image = styled.img`
+  grid-column: auto / span 6;
+`;
+
 const ShowList = styled.section`
-  grid-column: 1 / -1;
+ 
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -19,4 +28,4 @@ const ShowCard = styled.div`
   margin: 16px;
 `;
 
-export { Grid, ShowList, ShowCard };
+export { Grid, ShowList, ShowCard, ShowSection, Image };
