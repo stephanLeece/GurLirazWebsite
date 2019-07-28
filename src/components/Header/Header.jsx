@@ -10,12 +10,11 @@ const Header = ({ className }) => (
       <Grid>
         <LinkWrap to="/" exit={{ length: 0.5 }}>
           <Image />
+          Home
         </LinkWrap>
-
         <LinkWrap to="/shows" exit={{ length: 0.5 }}>
           Shows
         </LinkWrap>
-
         <LinkWrap to="/videos" exit={{ length: 0.5 }}>
           Videos
         </LinkWrap>

@@ -1,10 +1,27 @@
 import React from "react";
 
 import AppWrapper from "../components/AppWrapper";
+import DummyVideoImg from "./Assets/dummyVideo.png";
+import { Grid, Carousel, Slide, DummyVideo } from "./videos.styled";
 
 const Videos = props => (
   <AppWrapper location={props.location}>
-    <p> lovely Videos</p>
+    <Grid>
+      <Carousel>
+        <Slide>
+          <DummyVideo src={DummyVideoImg} />
+        </Slide>
+        <Slide>
+          <DummyVideo src={DummyVideoImg} />
+        </Slide>
+        <Slide>
+          <DummyVideo src={DummyVideoImg} />
+        </Slide>
+        <Slide>
+          <DummyVideo src={DummyVideoImg} />
+        </Slide>
+      </Carousel>
+    </Grid>
   </AppWrapper>
 );
 
