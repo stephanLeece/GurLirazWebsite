@@ -1,9 +1,9 @@
 const size = {
-    mobile: '375px',
-    tablet: '425px',
-    laptop: '768px',
-    desktop: '1024px',
-    widescreen: '1440px',
+    mobile: '0px',
+    tablet: '768px',
+    laptop: '1024px',
+    desktop: '1280px',
+    widescreen: '1600px',
   }
 
   export const BREAK_POINTS = {
