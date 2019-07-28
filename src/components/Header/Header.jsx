@@ -1,11 +1,8 @@
 import React from "react";
 
-import { TransitionPortal } from "gatsby-plugin-transition-link";
-
 import { Wrap, Grid, Image, LinkWrap } from "./Header.styled";
 
 const Header = ({ className }) => (
-  <TransitionPortal>
     <Wrap className={className}>
       <Grid>
         <LinkWrap to="/" exit={{ length: 0.5 }}>
@@ -20,7 +17,6 @@ const Header = ({ className }) => (
         </LinkWrap>
       </Grid>
     </Wrap>
-  </TransitionPortal>
 );
 
 export default Header;
