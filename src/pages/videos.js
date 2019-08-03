@@ -1,7 +1,6 @@
 import React from "react";
 
 import AppWrapper from "../components/AppWrapper";
-import DummyVideoImg from "./Assets/dummyVideo.png";
 import VideosScreen from "../screens/Videos";
 
 const Videos = props => (
