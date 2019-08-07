@@ -4,7 +4,7 @@ import { Reset } from "styled-reset";
 import {
   GlobalStyle,
   RootWrap,
-  Head,
+  Nav,
   PageTransitionWrap,
 } from "./AppWrapper.styled";
 
@@ -13,7 +13,7 @@ const Layout = props => (
     <GlobalStyle />
     <Reset />
     <RootWrap {...props}>
-      <Head />
+      <Nav />
       <PageTransitionWrap>
           {props.children}
       </PageTransitionWrap>

@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Grid, AboutSection, ContactSection } from "./Home.styled";
-import DummyContact from "../Assets/dummyContact.png";
+import { Grid, AboutSection } from "./Home.styled";
 
 const Home = () => (
     <Grid>
@@ -38,9 +37,6 @@ const Home = () => (
         </p>
         <br />
       </AboutSection>
-      <ContactSection>
-        <img src={DummyContact} />
-      </ContactSection>
     </Grid>
 );
 

@@ -10,7 +10,6 @@ const Grid = styled(GridWrap)`
 const Carousel = styled.div`
   margin: 0 -5%;
   padding: 0 5%;
-  border: 1px solid black;
   grid-column: 1 / -1;
   overflow-x: auto;
   white-space: nowrap;
@@ -44,7 +43,6 @@ const Slide = styled.div`
     &:last-of-type {
       padding-right: 0;
     }
-    border: 1px solid black;
   }
 `;
 
