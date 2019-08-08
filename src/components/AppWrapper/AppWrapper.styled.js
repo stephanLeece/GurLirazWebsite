@@ -24,6 +24,7 @@ const RootWrap = styled.div`
   position: relative;
   background-image: url(${WrapBackground});
   background-size: cover;
+  background-attachment: fixed;
 `;
 
 const Nav = styled(Navigation)`
