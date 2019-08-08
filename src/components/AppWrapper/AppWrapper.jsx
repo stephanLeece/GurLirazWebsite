@@ -13,7 +13,7 @@ const Layout = props => (
     <GlobalStyle />
     <Reset />
     <RootWrap {...props}>
-      <Nav />
+      <Nav {...props}/>
       <PageTransitionWrap>
           {props.children}
       </PageTransitionWrap>
