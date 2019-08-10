@@ -7,7 +7,7 @@ const Wrap = styled.div`
   margin: 0 8px;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 8px;
-  @media ${BREAK_POINTS.laptop} {
+  @media ${BREAK_POINTS.laptopMin} {
     margin: 0 5%;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 16px;

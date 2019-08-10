@@ -1,7 +1,8 @@
-import styled, { createGlobalStyle } from "styled-components";
-import WrapBackground from './assets/wrapBg.svg';
+import styled, { createGlobalStyle, css } from "styled-components";
+import WrapBackground from "./assets/wrapBg.svg";
 import PageTransitionWrapper from "../PageTransitionWrapper";
 import Navigation from "../Navigation";
+import { BREAK_POINTS } from "../../constants/BreakPoints";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -37,13 +38,22 @@ const Nav = styled(Navigation)`
   bottom: 0;
   z-index: 1;
   width: ${NAV_WIDTH_DESKTOP}px;
-
+  @media ${BREAK_POINTS.tabletMax} {
+    transform: translateX(-100%);
+    transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
+    ${({ isOpen }) => isOpen && css`
+        transform: translateX(0);
+    `};
+  }
 `;
 
 const PageTransitionWrap = styled(PageTransitionWrapper)`
-  margin-left: ${NAV_WIDTH_DESKTOP}px;
+  margin-left: 0;
   padding: 48px 0;
   width: 100%;
+  @media ${BREAK_POINTS.laptopMin} {
+    margin-left: ${NAV_WIDTH_DESKTOP}px;
+  }
 `;
 
 export { GlobalStyle, RootWrap, Nav, PageTransitionWrap };

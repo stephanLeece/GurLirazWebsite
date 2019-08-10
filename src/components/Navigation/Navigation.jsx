@@ -1,9 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Wrap, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social } from "./Navigation.styled";
+import { Wrap, CloseButton, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social } from "./Navigation.styled";
 import { H1, H2, H3, P } from "../Typography";
 
-const Navigation = props => {
+const Navigation = ({className, closeMenu}) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(
     graphql`
       query NavigationQuery {
@@ -28,7 +28,8 @@ const Navigation = props => {
   );
   const socialLinks = navContent && navContent.edges[0].node.links;
   return (
-    <Wrap className={props.className}>
+    <Wrap className={className}>
+    <CloseButton onClick={closeMenu}>x</CloseButton>
       <TitleWrap>
         <H1>Gur Liaz</H1>
         <H3>Guitarist | Composer</H3>

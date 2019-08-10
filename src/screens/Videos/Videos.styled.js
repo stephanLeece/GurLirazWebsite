@@ -24,7 +24,7 @@ const Carousel = styled.div`
   scroll-snap-points-x: repeat(100%);
   -ms-scroll-snap-points-x: repeat(100%);
   scroll-snap-type: x mandatory;
-  @media ${BREAK_POINTS.laptop} {
+  @media ${BREAK_POINTS.laptopMin} {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0;
@@ -40,7 +40,7 @@ const Slide = styled.div`
   &:last-of-type {
     padding-right: 7.5%;
   }
-  @media ${BREAK_POINTS.laptop} {
+  @media ${BREAK_POINTS.laptopMin} {
     margin: 16px;
     min-width: 40%;
     min-height: 400px;

@@ -11,6 +11,18 @@ const Wrap = styled.div`
   padding: 48px 24px;
 `;
 
+const CloseButton = styled.div`
+  background: rgba(225,225,225,1);
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const TitleWrap = styled.div`
   text-align: center;
 `;
@@ -39,4 +51,4 @@ const SocialWrap = styled.div`
 
 const Social = styled(SocialComponent)``;
 
-export { Wrap, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
+export { Wrap, CloseButton, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
