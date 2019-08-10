@@ -4,7 +4,6 @@ import { Reset } from "styled-reset";
 import {
   GlobalStyle,
   RootWrap,
-  MenuButton,
   Nav,
   PageTransitionWrap,
 } from "./AppWrapper.styled";
@@ -16,7 +15,7 @@ const Layout = props => {
     <GlobalStyle />
     <Reset />
     <RootWrap {...props}>
-      <Nav {...props} isOpen={isMenuOpen} closeMenu={() => toggleMenuOpen(!isMenuOpen)}/>
+      <Nav {...props} isOpen={isMenuOpen} toggleMenu={() => toggleMenuOpen(!isMenuOpen)} closeMenu={() => toggleMenuOpen(false)}/>
       <PageTransitionWrap>
           {props.children}
       </PageTransitionWrap>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import TransitionLink from "gatsby-plugin-transition-link";
+
+import { BREAK_POINTS } from "../../constants/BreakPoints";
 import SocialComponent from './Social';
 
 const Wrap = styled.div`
@@ -11,7 +13,7 @@ const Wrap = styled.div`
   padding: 48px 24px;
 `;
 
-const CloseButton = styled.div`
+const MenuButton = styled.div`
   background: rgba(225,225,225,1);
   height: 40px;
   width: 40px;
@@ -21,6 +23,9 @@ const CloseButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${BREAK_POINTS.desktopMin} {
+    display: none;
+  }
 `;
 
 const TitleWrap = styled.div`
@@ -51,4 +56,4 @@ const SocialWrap = styled.div`
 
 const Social = styled(SocialComponent)``;
 
-export { Wrap, CloseButton, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
+export { Wrap, MenuButton, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
