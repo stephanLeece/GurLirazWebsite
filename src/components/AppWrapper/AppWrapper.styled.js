@@ -21,6 +21,7 @@ const NAV_WIDTH_DESKTOP = 256;
 
 const RootWrap = styled.div`
   min-height: 100vh;
+  width: 100%;
   display: flex;
   position: relative;
   background-image: url(${WrapBackground});
@@ -42,6 +43,7 @@ const Nav = styled(Navigation)`
 const PageTransitionWrap = styled(PageTransitionWrapper)`
   margin-left: ${NAV_WIDTH_DESKTOP}px;
   padding: 48px 0;
+  width: 100%;
 `;
 
 export { GlobalStyle, RootWrap, Nav, PageTransitionWrap };

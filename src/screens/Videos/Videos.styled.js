@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
+import VideoComponent from "./Video";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import GridWrap from "../../components/GridWrap";
 
 const Grid = styled(GridWrap)`
   margin: 0;
+  min-width: 100%;
+  border: 1px dashed pink;
 `;
 
 const Carousel = styled.div`
+  width: 100%;
   margin: 0 -5%;
   padding: 0 5%;
   grid-column: 1 / -1;
@@ -44,12 +48,12 @@ const Slide = styled.div`
       padding-right: 0;
     }
   }
+  border: 1px dashed red;
 `;
 
-const DummyVideo = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+const Video = styled(VideoComponent)`
+ width: 100%;
+ border: 1px dashed blue;
 `;
 
-export { Grid, Carousel, Slide, DummyVideo };
+export { Grid, Carousel, Slide, Video };

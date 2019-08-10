@@ -1,25 +1,20 @@
 import React from "react";
 
-import DummyVideoImg from "../Assets/dummyVideo.png";
-import { Grid, Carousel, Slide, DummyVideo } from "./Videos.styled";
+import { Grid, Carousel, Slide, Video } from "./Videos.styled";
 
-const Videos = () => (
+const Videos = videos => {
+  const videoList = videos.videos.edges;
+  return (
     <Grid>
       <Carousel>
-        <Slide>
-          <DummyVideo src={DummyVideoImg} />
-        </Slide>
-        <Slide>
-          <DummyVideo src={DummyVideoImg} />
-        </Slide>
-        <Slide>
-          <DummyVideo src={DummyVideoImg} />
-        </Slide>
-        <Slide>
-          <DummyVideo src={DummyVideoImg} />
-        </Slide>
+        {videoList.map(video => (
+          <Slide>
+            <Video youtubeId={video.node.youtubeVideoId} />
+          </Slide>
+        ))}
       </Carousel>
     </Grid>
-);
+  );
+};
 
 export default Videos;
