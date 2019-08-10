@@ -20,7 +20,6 @@ const ShowList = styled.section`
 
 const ShowCard = styled.div`
     background: rgba(225,225,225,0.75);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 16px;
   margin: 16px;
 `;

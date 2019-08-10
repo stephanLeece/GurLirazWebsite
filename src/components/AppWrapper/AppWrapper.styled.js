@@ -9,14 +9,15 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   body {
-    @import url('https://fonts.googleapis.com/css?family=Abel|Raleway:400,700&display=swap');
     height: 100%;
     width: 100%;
   }
+  * {
+    box-sizing: border-box;
+  }
 `;
 
-const HEADER_WIDTH_DESKTOP = 256;
-const HEADER_HEIGHT_MOBILE = 256;
+const NAV_WIDTH_DESKTOP = 256;
 
 const RootWrap = styled.div`
   min-height: 100vh;
@@ -34,13 +35,12 @@ const Nav = styled(Navigation)`
   top: 0;
   bottom: 0;
   z-index: 1;
-  width: ${HEADER_WIDTH_DESKTOP}px;
-  /* font-family: 'Abel', sans-serif; */
-    font-family: 'Raleway', sans-serif;
+  width: ${NAV_WIDTH_DESKTOP}px;
+
 `;
 
 const PageTransitionWrap = styled(PageTransitionWrapper)`
-  margin-left: ${HEADER_WIDTH_DESKTOP}px;
+  margin-left: ${NAV_WIDTH_DESKTOP}px;
   padding: 48px 0;
 `;
 

@@ -16,6 +16,20 @@ module.exports = {
         spaceId: process.env.spaceId,
         accessToken: process.env.accessToken
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Abel`,
+          },
+          {
+            family: `Raleway`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
     }
   ]
 };
