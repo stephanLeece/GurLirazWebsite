@@ -1,3 +1,3 @@
-import SocialLink from './SocialLink';
+import Social from './Social';
 
-export default SocialLink;
+export default Social;

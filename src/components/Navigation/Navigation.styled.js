@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import TransitionLink from "gatsby-plugin-transition-link";
-import SocialLink from './SocialLink';
+import SocialComponent from './Social';
 
 const Wrap = styled.div`
   display: flex;
@@ -37,6 +37,6 @@ const SocialWrap = styled.div`
   justify-content: space-between;
 `;
 
-const Social = styled(SocialLink)``;
+const Social = styled(SocialComponent)``;
 
 export { Wrap, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
