@@ -7,10 +7,11 @@ import {
   TitleWrap,
   PageLinksWrap,
   PageLink,
+  MailTo,
   SocialWrap,
   Social
 } from "./Navigation.styled";
-import { H1, H2, H3, P } from "../Typography";
+import { H1, H3, P } from "../Typography";
 
 const Navigation = ({ className, toggleMenu, closeMenu }) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(
@@ -37,7 +38,6 @@ const Navigation = ({ className, toggleMenu, closeMenu }) => {
   );
   const socialLinks = navContent && navContent.edges[0].node.links;
   return (
-    <TransitionPortal>
       <Wrap className={className}>
         <MenuButton onClick={toggleMenu}>x</MenuButton>
         <TitleWrap>
@@ -48,35 +48,35 @@ const Navigation = ({ className, toggleMenu, closeMenu }) => {
           <PageLink
             onClick={closeMenu}
             to="/"
-            enter={{ length: 3 }}
-            exit={{ length: 3 }}
+            enter={{ length: 0.5 }}
+            exit={{ length: 0.5 }}
           >
             <H3>Home</H3>
           </PageLink>
           <PageLink
             onClick={closeMenu}
             to="/shows"
-            enter={{ length: 3 }}
-            exit={{ length: 3 }}
+            enter={{ length: 0.5 }}
+            exit={{ length: 0.5 }}
           >
             <H3>Shows</H3>
           </PageLink>
           <PageLink
             onClick={closeMenu}
             to="/videos"
-            enter={{ length: 3 }}
-            exit={{ length: 3 }}
+            enter={{ length: 0.5 }}
+            exit={{ length: 0.5 }}
           >
             <H3>Videos</H3>
           </PageLink>
         </PageLinksWrap>
+        <MailTo href = "mailto: gurliraz@gmail.com"><H3>gurliraz@gmail.com</H3></MailTo>
         <SocialWrap>
           {socialLinks.map(link => (
             <Social linkData={link} />
           ))}
         </SocialWrap>
       </Wrap>
-    </TransitionPortal>
   );
 };
 

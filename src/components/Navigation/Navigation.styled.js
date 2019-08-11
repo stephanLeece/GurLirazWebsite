@@ -2,19 +2,19 @@ import styled from "styled-components";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
-import SocialComponent from './Social';
+import SocialComponent from "./Social";
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: rgba(225,225,225,1);
+  background: rgba(225, 225, 225, 1);
   padding: 48px 24px;
 `;
 
 const MenuButton = styled.div`
-  background: rgba(225,225,225,1);
+  background: rgba(225, 225, 225, 1);
   height: 40px;
   width: 40px;
   position: absolute;
@@ -32,9 +32,7 @@ const TitleWrap = styled.div`
   text-align: center;
 `;
 
-const PageLinksWrap = styled.div`
-
-`;
+const PageLinksWrap = styled.div``;
 
 const PageLink = styled(TransitionLink)`
   display: flex;
@@ -48,6 +46,15 @@ const PageLink = styled(TransitionLink)`
   }
 `;
 
+const MailTo = styled.a`
+  color: #333333;
+  text-decoration: none;
+  &:hover {
+    color: #333333;
+    opacity: 0.5;
+  }
+`;
+
 const SocialWrap = styled.div`
   display: flex;
   width: 100%;
@@ -56,4 +63,13 @@ const SocialWrap = styled.div`
 
 const Social = styled(SocialComponent)``;
 
-export { Wrap, MenuButton, TitleWrap, PageLinksWrap, PageLink, SocialWrap, Social };
+export {
+  Wrap,
+  MenuButton,
+  TitleWrap,
+  PageLinksWrap,
+  PageLink,
+  MailTo,
+  SocialWrap,
+  Social
+};

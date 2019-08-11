@@ -36,6 +36,7 @@ const Nav = styled(Navigation)`
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 0;
   z-index: 1;
   width: ${NAV_WIDTH_DESKTOP}px;
   @media ${BREAK_POINTS.tabletMax} {
