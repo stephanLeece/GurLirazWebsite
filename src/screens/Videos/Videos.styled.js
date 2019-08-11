@@ -7,7 +7,6 @@ import GridWrap from "../../components/GridWrap";
 const Grid = styled(GridWrap)`
   margin: 0;
   min-width: 100%;
-  border: 1px dashed pink;
 `;
 
 const Carousel = styled.div`
@@ -43,17 +42,16 @@ const Slide = styled.div`
   @media ${BREAK_POINTS.laptopMin} {
     margin: 16px;
     min-width: 40%;
-    min-height: 400px;
     &:last-of-type {
       padding-right: 0;
     }
   }
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 `;
 
 const Video = styled(VideoComponent)`
  width: 100%;
- border: 1px dashed blue;
+ /* border: 1px dashed blue; */
 `;
 
 export { Grid, Carousel, Slide, Video };

@@ -5,7 +5,7 @@ import GridWrap from "../../components/GridWrap";
 const Grid = styled(GridWrap)``;
 
 const ShowSection = styled.div`
-   grid-column: auto / span 6;
+  grid-column: auto / span 6;
 `;
 
 const Image = styled.img`
@@ -19,9 +19,9 @@ const ShowList = styled.section`
 `;
 
 const ShowCard = styled.div`
-    background: rgba(225,225,225,0.75);
+  background: rgba(225, 225, 225, 0.75);
   padding: 16px;
-  margin: 16px;
+  margin: 16px 0;
 `;
 
 export { Grid, ShowList, ShowCard, ShowSection, Image };
