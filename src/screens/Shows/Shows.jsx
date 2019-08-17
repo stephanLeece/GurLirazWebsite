@@ -1,68 +1,36 @@
 import React from "react";
+import moment from "moment";
 
 import { Grid, ShowSection, ShowList, ShowCard, Image } from "./Shows.styled";
-import { H3, P } from '../../components/Typography';
+import { H3, P } from "../../components/Typography";
 
-const Shows = () => (
+const Shows = ({ upcomingShows, pastShows }) => {
+  console.log("upcomingShows", upcomingShows);
+  console.log("pastShows", pastShows);
+  return (
     <Grid>
-      <ShowSection>
-      <H3>Upcoming</H3>
-        <ShowList>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>October 13</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-        </ShowList>
-        <H3>Past</H3>
-        <ShowList>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-          <ShowCard>
-            <P>Jan 12</P>
-            <P>With Amanda Becker @Los Angelitos (Kreuzberg)</P>
-          </ShowCard>
-        </ShowList>
-      </ShowSection>
-      <Image />
+    <ShowSection>
+    <h1>Upcoming</h1>
+      <ShowList>
+        {upcomingShows.map(show => (
+          <div>
+          <p>{show.mainDetails}</p>
+            <p>{show.date}</p>
+          </div>
+        ))}
+      </ShowList>
+      <h1>Past</h1>
+      <ShowList>
+        {pastShows.map(show => (
+          <div>
+          <p>{show.mainDetails}</p>
+            <p>{show.date}</p>
+          </div>
+        ))}
+      </ShowList>
+     </ShowSection>
     </Grid>
-);
+  );
+};
 
 export default Shows;
