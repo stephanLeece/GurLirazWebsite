@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-import VideoComponent from "./Video";
-import { BREAK_POINTS } from "../../constants/BreakPoints";
-import GridWrap from "../../components/GridWrap";
+import VideoComponent from "../Video";
+import { BREAK_POINTS } from "../../../constants/BreakPoints";
 
-const Grid = styled(GridWrap)`
-  margin: 0;
-  min-width: 100%;
+const Wrap = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 const Carousel = styled.div`
@@ -46,12 +45,10 @@ const Slide = styled.div`
       padding-right: 0;
     }
   }
-  /* border: 1px dashed red; */
 `;
 
 const Video = styled(VideoComponent)`
  width: 100%;
- /* border: 1px dashed blue; */
 `;
 
-export { Grid, Carousel, Slide, Video };
+export { Wrap, Carousel, Slide, Video };

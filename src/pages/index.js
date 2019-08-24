@@ -6,7 +6,7 @@ import HomeScreen from "../screens/Home";
 
 const Home = props => (
   <AppWrapper location={props.location}>
-    <HomeScreen />
+    <HomeScreen homeScreenData={props.data.allContentfulAboutPage.edges[0].node}/>
   </AppWrapper>
 );
 

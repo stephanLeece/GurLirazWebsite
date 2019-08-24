@@ -9,7 +9,8 @@
   "scripts": {
     "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
