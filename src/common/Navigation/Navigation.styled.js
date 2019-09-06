@@ -28,6 +28,11 @@ const MenuButton = styled.div`
   }
 `;
 
+const Icon = styled.img`
+  height: 24px;
+  width: 24px;
+`;
+
 const TitleWrap = styled.div`
   text-align: center;
 `;
@@ -66,6 +71,7 @@ const Social = styled(SocialComponent)``;
 export {
   Wrap,
   MenuButton,
+  Icon,
   TitleWrap,
   PageLinksWrap,
   PageLink,

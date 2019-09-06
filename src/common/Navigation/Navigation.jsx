@@ -1,19 +1,24 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { TransitionPortal } from "gatsby-plugin-transition-link";
+
 import {
   Wrap,
   MenuButton,
+  Icon,
   TitleWrap,
   PageLinksWrap,
   PageLink,
   MailTo,
   SocialWrap,
-  Social
+  Social,
 } from "./Navigation.styled";
+
+import HamburgerIcon from './assets/hamburger.svg';
+import CloseIcon from './assets/close.svg';
+
 import { H1, H3 } from "../Typography";
 
-const Navigation = ({ className, toggleMenu, closeMenu }) => {
+const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(
     graphql`
       query NavigationQuery {
@@ -39,7 +44,7 @@ const Navigation = ({ className, toggleMenu, closeMenu }) => {
   const socialLinks = navContent && navContent.edges[0].node.links;
   return (
       <Wrap className={className}>
-        <MenuButton onClick={toggleMenu}>x</MenuButton>
+        <MenuButton onClick={toggleMenu}><Icon src={isOpen ? CloseIcon : HamburgerIcon} /></MenuButton>
         <TitleWrap>
           <H1>Gur Liaz</H1>
           <H3>Guitarist | Composer</H3>
