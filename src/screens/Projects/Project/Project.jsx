@@ -1,18 +1,15 @@
 import React from "react";
 
-import { Wrap, Carousel, Slide, Video } from "./Project.styled";
-import { H2, P } from "../../../common/Typography";
+import { Wrap, Title, Description, Carousel, Video } from "./Project.styled";
 
 const Project = ({ className, projectData: { title, description, videos } }) => {
   return (
     <Wrap className={className}>
-      <H2>{title}</H2>
-      <P>{description}</P>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
       <Carousel>
         {videos.map(video => (
-          <Slide>
-            <Video youtubeId={video.youtubeVideoId} />
-          </Slide>
+          <Video youtubeId={video.youtubeVideoId} />
         ))}
       </Carousel>
     </Wrap>
