@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import GridWrap from "../../components/GridWrap";
+import GridWrap from "../../common/GridWrap";
 
 const Grid = styled(GridWrap)`
 `;

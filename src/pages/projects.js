@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import AppWrapper from "../components/AppWrapper";
+import AppWrapper from "../common/AppWrapper";
 import ProjectsScreen from "../screens/Projects";
 
 const Projects = props => (

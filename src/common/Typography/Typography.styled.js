@@ -2,7 +2,6 @@ import styled from 'styled-components';
 const StyledH1 = styled.h1`
     font-size: 48px;
     font-family: 'Abel', sans-serif;
-     
 `;
 
 const StyledH2 = styled.h2`

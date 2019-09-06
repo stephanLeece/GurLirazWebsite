@@ -1,6 +1,6 @@
 import React from "react";
 
-import AppWrapper from "../components/AppWrapper";
+import AppWrapper from "../common/AppWrapper";
 import ShowsScreen from "../screens/Shows";
 
 const Shows = props => (

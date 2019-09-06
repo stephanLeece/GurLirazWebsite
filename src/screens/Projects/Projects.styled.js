@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import ProjectComponent from "./Project";
-import GridWrap from "../../components/GridWrap";
+import GridWrap from "../../common/GridWrap";
 
 const Grid = styled(GridWrap)`
 `;

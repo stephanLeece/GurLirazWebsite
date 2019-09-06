@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Wrap, Carousel, Slide, Video } from "./Project.styled";
-import { H2, P } from "../../../components/Typography";
+import { H2, P } from "../../../common/Typography";
 
 const Project = ({ className, projectData: { title, description, videos } }) => {
   return (

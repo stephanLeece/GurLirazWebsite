@@ -1,6 +1,6 @@
 import React from "react";
 
-import { P } from '../../components/Typography';
+import { P } from '../../common/Typography';
 import { Grid, AboutSection } from "./Home.styled";
 
 const Home = () => (

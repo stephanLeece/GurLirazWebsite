@@ -11,7 +11,7 @@ import {
   SocialWrap,
   Social
 } from "./Navigation.styled";
-import { H1, H3, P } from "../Typography";
+import { H1, H3 } from "../Typography";
 
 const Navigation = ({ className, toggleMenu, closeMenu }) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(
