@@ -1,5 +1,5 @@
 import { compose, withProps, branch, renderNothing } from "recompose";
-import { dateHasPassed } from '../../utils/time'
+import { dateHasPassed } from "../../utils/time";
 
 import Shows from "./Shows";
 
@@ -17,6 +17,11 @@ const enhance = compose(
     return {
       upcomingShows,
       pastShows
+    };
+  }),
+  withProps(({ photos }) => {
+    return {
+      imageUrls: photos.map(photo => photo.file.url)
     };
   })
 );

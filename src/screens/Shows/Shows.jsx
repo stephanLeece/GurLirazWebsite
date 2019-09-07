@@ -1,15 +1,19 @@
 import React from "react";
 
-import { Grid, ShowSection, List, Image } from "./Shows.styled";
+import { Wrap, ShowSection, List, ImageBlock, Image } from "./Shows.styled";
 
-const Shows = ({ upcomingShows, pastShows }) => {
+const Shows = ({ upcomingShows, pastShows, imageUrls }) => {
+  console.log(imageUrls)
   return (
-    <Grid>
+    <Wrap>
       <ShowSection>
         <List title="Upcoming Shows" shows={upcomingShows.reverse()} />
         <List title="Past Shows" shows={pastShows} />
       </ShowSection>
-    </Grid>
+      <ImageBlock>
+        {imageUrls.map(imageUrl  => <Image src={imageUrl} />)}
+      </ImageBlock>
+    </Wrap>
   );
 };
 

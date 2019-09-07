@@ -2,6 +2,7 @@ import styled from "styled-components";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
+import { COLORS } from "../../constants/Colors";
 import SocialComponent from "./Social";
 
 const Wrap = styled.div`
@@ -9,12 +10,12 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: rgba(225, 225, 225, 1);
+  background: ${COLORS.Grey3};
   padding: 48px 24px;
 `;
 
 const MenuButton = styled.div`
-  background: rgba(225, 225, 225, 1);
+  background: ${COLORS.Grey3};
   height: 40px;
   width: 40px;
   position: absolute;
@@ -35,6 +36,7 @@ const Icon = styled.img`
 
 const TitleWrap = styled.div`
   text-align: center;
+  color: ${COLORS.Grey1};
 `;
 
 const PageLinksWrap = styled.div``;
@@ -46,13 +48,14 @@ const PageLink = styled(TransitionLink)`
   color: black;
   text-decoration: none;
   margin-bottom: 16px;
+  color: ${COLORS.Grey1};
   &:hover {
     opacity: 0.5;
   }
 `;
 
 const MailTo = styled.a`
-  color: #333333;
+  color: ${COLORS.Grey1};
   text-decoration: none;
   &:hover {
     color: #333333;

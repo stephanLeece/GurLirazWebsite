@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle, css } from "styled-components";
-import WrapBackground from "./assets/wrapBg.svg";
 import PageTransitionWrapper from "../PageTransitionWrapper";
 import Navigation from "../Navigation";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
+import { COLORS } from "../../constants/Colors";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -25,9 +25,7 @@ const RootWrap = styled.div`
   width: 100%;
   display: flex;
   position: relative;
-  background-image: url(${WrapBackground});
-  background-size: cover;
-  background-attachment: fixed;
+  background: ${COLORS.Grey2};
 `;
 
 const Nav = styled(Navigation)`

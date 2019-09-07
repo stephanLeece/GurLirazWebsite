@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 import { H4, P } from "../../../../common/Typography";
+import { COLORS } from "../../../../constants/Colors";
 
 const Wrap = styled.div`
-    background: rgba(225, 225, 225, 1);
+    background: ${COLORS.Grey5};
     padding: 16px;
 `;
 

@@ -1,16 +1,25 @@
 import styled from "styled-components";
 
-import GridWrap from "../../common/GridWrap";
-import ShowList from './ShowList';
+import ShowList from "./ShowList";
 
-const Grid = styled(GridWrap)``;
+const Wrap = styled.div`
+  display: flex;
+`;
 
 const ShowSection = styled.div`
-  grid-column: auto / span 4;
+  flex: 0 0 auto;
+  padding: 0 16px;
+  max-width: 100%;
+`;
+
+const ImageBlock = styled.div`
+  margin-top: -48px;
+
 `;
 
 const Image = styled.img`
-  grid-column: auto / span 8;
+  width: 100%;
+  height: auto;
 `;
 
 const List = styled(ShowList)`
@@ -19,4 +28,4 @@ const List = styled(ShowList)`
   margin-bottom: 16px;
 `;
 
-export { Grid, ShowSection, List, Image };
+export { Wrap, ShowSection, List, ImageBlock, Image };
