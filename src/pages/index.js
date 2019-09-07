@@ -22,6 +22,16 @@ query HomeQuery {
             html
           }
         }
+        photos {
+          file {
+            url
+          }
+        }
+        additionalDescription {
+          childMarkdownRemark {
+            html
+          }
+        }
       }
     }
   }
