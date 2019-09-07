@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wrap, Title, Card } from "./Showlist.styled";
+import { Wrap, Title, Card } from "./ShowList.styled";
 
 const ShowList = ({ className, title, shows }) => (
     <Wrap className={className}>
