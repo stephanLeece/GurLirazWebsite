@@ -4,7 +4,7 @@ import { H4, P } from "../../../../common/Typography";
 import { COLORS } from "../../../../constants/Colors";
 
 const Wrap = styled.div`
-    background: ${COLORS.Grey5};
+    background: ${COLORS.BackgroundLight};
     padding: 16px;
 `;
 

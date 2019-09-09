@@ -11,11 +11,11 @@ const Wrap = styled.div`
 `;
 
 const Title = styled(H2)`
-  color: ${COLORS.Grey5};
+  color: ${COLORS.TextLight};
 `;
 
 const Description = styled(P)`
-  color: ${COLORS.Grey5};
+  color: ${COLORS.TextLight};
 `;
 
 const Carousel = styled(CarouselComponent)``;

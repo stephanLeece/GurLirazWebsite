@@ -3,6 +3,7 @@ import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
+import { H1, H3 } from "../Typography";
 import SocialComponent from "./Social";
 
 const Wrap = styled.div`
@@ -10,12 +11,12 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: ${COLORS.Grey3};
+  background: ${COLORS.BackgroundLight};
   padding: 48px 24px;
 `;
 
 const MenuButton = styled.div`
-  background: ${COLORS.Grey3};
+  background: ${COLORS.BackgroundLight};
   height: 40px;
   width: 40px;
   position: absolute;
@@ -34,9 +35,22 @@ const Icon = styled.img`
   width: 24px;
 `;
 
-const TitleWrap = styled.div`
+const Title = styled(H1)`
   text-align: center;
-  color: ${COLORS.Grey1};
+  color: ${COLORS.TextDark};
+`;
+
+const ProfileImage = styled.img`
+  height: 180px;
+  width: 180px;
+  border: 1px solid ${COLORS.TextDark};
+  -webkit-filter: contrast(120%), brightness(75%);
+  filter: contrast(120%), brightness(75%);
+`;
+
+const SubTitle = styled(H3)`
+  text-align: center;
+  color: ${COLORS.TextDark};
 `;
 
 const PageLinksWrap = styled.div``;
@@ -48,17 +62,17 @@ const PageLink = styled(TransitionLink)`
   color: black;
   text-decoration: none;
   margin-bottom: 16px;
-  color: ${COLORS.Grey1};
+  color: ${COLORS.TextDark};
   &:hover {
     opacity: 0.5;
   }
 `;
 
 const MailTo = styled.a`
-  color: ${COLORS.Grey1};
+  color: ${COLORS.TextDark};
   text-decoration: none;
   &:hover {
-    color: #333333;
+    color: ${COLORS.TextDark};
     opacity: 0.5;
   }
 `;
@@ -75,7 +89,9 @@ export {
   Wrap,
   MenuButton,
   Icon,
-  TitleWrap,
+  Title,
+  SubTitle,
+  ProfileImage,
   PageLinksWrap,
   PageLink,
   MailTo,

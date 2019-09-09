@@ -8,7 +8,7 @@ const Project = ({ className, projectData: { title, description, videos } }) => 
       <Title>{title}</Title>
       <Description>{description}</Description>
       <Carousel>
-        {videos.map(video => (
+        {videos && videos.map(video => (
           <Video youtubeId={video.youtubeVideoId} />
         ))}
       </Carousel>

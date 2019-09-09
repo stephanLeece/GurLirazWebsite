@@ -7,7 +7,7 @@ const Projects = ({
 }) => {
   return (
     <Grid>
-      {projects.map(project => (
+      {projects && projects.map(project => (
         <Project projectData={project} />
       ))}
     </Grid>

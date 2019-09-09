@@ -12,7 +12,7 @@ const Wrap = styled.div`
 
 const Title = styled(H1)`
     margin-bottom: 16px;
-    color: ${COLORS.Grey5};
+    color: ${COLORS.TextLight};
 `;
 
 const Card = styled(ShowCard)`

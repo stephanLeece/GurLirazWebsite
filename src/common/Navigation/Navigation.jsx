@@ -5,16 +5,18 @@ import {
   Wrap,
   MenuButton,
   Icon,
-  TitleWrap,
+  Title,
+  SubTitle,
+  ProfileImage,
   PageLinksWrap,
   PageLink,
   MailTo,
   SocialWrap,
-  Social,
+  Social
 } from "./Navigation.styled";
 
-import HamburgerIcon from './assets/hamburger.svg';
-import CloseIcon from './assets/close.svg';
+import HamburgerIcon from "./assets/hamburger.svg";
+import CloseIcon from "./assets/close.svg";
 
 import { H1, H3 } from "../Typography";
 
@@ -25,6 +27,11 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
         allContentfulAboutPage {
           edges {
             node {
+              profilePhoto {
+                file {
+                  url
+                }
+              }
               links {
                 linkName
                 linkUrl
@@ -42,46 +49,50 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
     `
   );
   const socialLinks = navContent && navContent.edges[0].node.links;
+  const profilePhotoUrl = navContent && navContent.edges[0].node.profilePhoto.file.url;
   return (
-      <Wrap className={className}>
-        <MenuButton onClick={toggleMenu}><Icon src={isOpen ? CloseIcon : HamburgerIcon} /></MenuButton>
-        <TitleWrap>
-          <H1>Gur Liaz</H1>
-          <H3>Guitarist | Composer</H3>
-        </TitleWrap>
-        <PageLinksWrap>
-          <PageLink
-            onClick={closeMenu}
-            to="/"
-            enter={{ length: 0.5 }}
-            exit={{ length: 0.5 }}
-          >
-            <H3>Home</H3>
-          </PageLink>
-          <PageLink
-            onClick={closeMenu}
-            to="/shows"
-            enter={{ length: 0.5 }}
-            exit={{ length: 0.5 }}
-          >
-            <H3>Shows</H3>
-          </PageLink>
-          <PageLink
-            onClick={closeMenu}
-            to="/projects"
-            enter={{ length: 0.5 }}
-            exit={{ length: 0.5 }}
-          >
-            <H3>Projects</H3>
-          </PageLink>
-        </PageLinksWrap>
-        <MailTo href = "mailto: gurliraz@gmail.com"><H3>gurliraz@gmail.com</H3></MailTo>
-        <SocialWrap>
-          {socialLinks.map(link => (
-            <Social linkData={link} />
-          ))}
-        </SocialWrap>
-      </Wrap>
+    <Wrap className={className}>
+      <MenuButton onClick={toggleMenu}>
+        <Icon src={isOpen ? CloseIcon : HamburgerIcon} />
+      </MenuButton>
+        <Title>Gur Liaz</Title>
+        <ProfileImage src = {profilePhotoUrl} />
+        <SubTitle>Guitarist | Composer</SubTitle>
+      <PageLinksWrap>
+        <PageLink
+          onClick={closeMenu}
+          to="/"
+          enter={{ length: 0.5 }}
+          exit={{ length: 0.5 }}
+        >
+          <H3>Home</H3>
+        </PageLink>
+        <PageLink
+          onClick={closeMenu}
+          to="/shows"
+          enter={{ length: 0.5 }}
+          exit={{ length: 0.5 }}
+        >
+          <H3>Shows</H3>
+        </PageLink>
+        <PageLink
+          onClick={closeMenu}
+          to="/projects"
+          enter={{ length: 0.5 }}
+          exit={{ length: 0.5 }}
+        >
+          <H3>Projects</H3>
+        </PageLink>
+      </PageLinksWrap>
+      <MailTo href="mailto: gurliraz@gmail.com">
+        <H3>gurliraz@gmail.com</H3>
+      </MailTo>
+      <SocialWrap>
+        {socialLinks.map(link => (
+          <Social linkData={link} />
+        ))}
+      </SocialWrap>
+    </Wrap>
   );
 };
 

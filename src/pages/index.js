@@ -1,39 +1,41 @@
 import React from "react";
-import { graphql } from 'gatsby';
+import { graphql } from "gatsby";
 
 import AppWrapper from "../common/AppWrapper";
 import HomeScreen from "../screens/Home";
 
 const Home = props => (
   <AppWrapper location={props.location}>
-    <HomeScreen homeScreenData={props.data.allContentfulAboutPage.edges[0].node}/>
+    <HomeScreen
+      homeScreenData={props.data.allContentfulAboutPage.edges[0].node}
+    />
   </AppWrapper>
 );
 
 export default Home;
 
 export const homePageQuery = graphql`
-query HomeQuery {
-  allContentfulAboutPage {
-    edges {
-      node {
-        mainDescription {
-          childMarkdownRemark {
-            html
+  query HomeQuery {
+    allContentfulAboutPage {
+      edges {
+        node {
+          mainDescription {
+            childMarkdownRemark {
+              html
+            }
           }
-        }
-        photos {
-          file {
-            url
+          photos {
+            file {
+              url
+            }
           }
-        }
-        additionalDescription {
-          childMarkdownRemark {
-            html
+          additionalDescription {
+            childMarkdownRemark {
+              html
+            }
           }
         }
       }
     }
   }
-}
-`
+`;

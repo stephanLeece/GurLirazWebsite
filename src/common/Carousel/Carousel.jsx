@@ -4,7 +4,7 @@ import { Wrap, Slide } from "./Carousel.styled";
 
 const Carousel = ({ className, children }) => (
     <Wrap className={className}>
-        {children.map(child => (
+        {children && children.map(child => (
         <Slide>{child}</Slide>
         ))}
     </Wrap>

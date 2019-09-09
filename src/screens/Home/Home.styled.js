@@ -14,14 +14,14 @@ max-width: 100%;
 `;
 
 const Title = styled(H1)`
-  color: ${COLORS.Grey5};
+  color: ${COLORS.TextLight};
   @media ${BREAK_POINTS.desktopMin} {
     display: none;
   }
 `;
 
 const MainText = styled(P)`
-  color: ${COLORS.Grey5};
+  color: ${COLORS.TextLight};
 `;
 
 const Image = styled.img`
@@ -29,7 +29,7 @@ const Image = styled.img`
 `;
 
 const AdditionalText = styled(P)`
-  color: ${COLORS.Grey5};
+  color: ${COLORS.TextLight};
 `;
 
 export { Wrap, Title, MainText, Image, AdditionalText };
