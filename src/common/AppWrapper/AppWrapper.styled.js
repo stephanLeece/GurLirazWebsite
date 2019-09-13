@@ -37,7 +37,7 @@ const Nav = styled(Navigation)`
   left: 0;
   z-index: 1;
   width: ${NAV_WIDTH_DESKTOP}px;
-  @media ${BREAK_POINTS.tabletMax} {
+  @media ${BREAK_POINTS.mobileMax} {
     transform: translateX(-100%);
     transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
     ${({ isOpen }) => isOpen && css`
@@ -50,7 +50,7 @@ const PageTransitionWrap = styled(PageTransitionWrapper)`
   margin-left: 0;
   padding: 48px 0;
   width: 100%;
-  @media ${BREAK_POINTS.laptopMin} {
+  @media ${BREAK_POINTS.tabletMin} {
     margin-left: ${NAV_WIDTH_DESKTOP}px;
   }
 `;

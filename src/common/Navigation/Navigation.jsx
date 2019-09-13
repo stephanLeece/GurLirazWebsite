@@ -52,7 +52,7 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
   const profilePhotoUrl = navContent && navContent.edges[0].node.profilePhoto.file.url;
   return (
     <Wrap className={className}>
-      <MenuButton onClick={toggleMenu}>
+      <MenuButton isOpen={isOpen} onClick={toggleMenu}>
         <Icon src={isOpen ? CloseIcon : HamburgerIcon} />
       </MenuButton>
         <Title>Gur Liaz</Title>

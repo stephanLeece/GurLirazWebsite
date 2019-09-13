@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { BREAK_POINTS } from "../../constants/BreakPoints";
 import ShowList from "./ShowList";
 
 const Wrap = styled.div`
@@ -14,6 +15,9 @@ const ShowSection = styled.div`
 
 const ImageBlock = styled.div`
   margin-top: -48px;
+  @media ${BREAK_POINTS.tabletMax} {
+    display: none;
+  }
 
 `;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
@@ -13,6 +13,7 @@ const Wrap = styled.div`
   align-items: center;
   background: ${COLORS.BackgroundLight};
   padding: 48px 24px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 `;
 
 const MenuButton = styled.div`
@@ -25,7 +26,12 @@ const MenuButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media ${BREAK_POINTS.desktopMin} {
+  transform: translateX(0%);
+    transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
+    ${({ isOpen }) => isOpen && css`
+        transform: translateX(-100%);
+    `};
+  @media ${BREAK_POINTS.tabletMin} {
     display: none;
   }
 `;
