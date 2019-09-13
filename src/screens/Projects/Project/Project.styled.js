@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import VideoComponent from "../Video";
-import { H1, H2 } from "../../../common/Typography";
+import { H1, H4 } from "../../../common/Typography";
 import CarouselComponent from "../../../common/Carousel";
 import { COLORS } from "../../../constants/Colors";
 
@@ -15,7 +15,7 @@ const Title = styled(H1)`
   margin-bottom: 8px;
 `;
 
-const Description = styled(H2)`
+const Description = styled(H4)`
   color: ${COLORS.TextLight};
   margin-bottom: 8px;
 `;

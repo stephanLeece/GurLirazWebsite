@@ -16,12 +16,12 @@ const StyledH3 = styled.h3`
 
 const StyledH4 = styled.h4`
     font-size: 24px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Manjari', sans-serif;
 `;
 
 const StyledP = styled.p`
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-family: 'Manjari', sans-serif;
 `;
 
 export {

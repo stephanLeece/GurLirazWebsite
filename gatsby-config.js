@@ -25,8 +25,7 @@ module.exports = {
             family: `Abel`,
           },
           {
-            family: `Raleway`,
-            variants: [`400`, `700`]
+            family: `Manjari`,
           },
         ],
       },
