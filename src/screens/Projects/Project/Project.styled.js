@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import VideoComponent from "../Video";
-import { H2, P } from "../../../common/Typography";
+import { H1, H2 } from "../../../common/Typography";
 import CarouselComponent from "../../../common/Carousel";
 import { COLORS } from "../../../constants/Colors";
 
@@ -10,15 +10,18 @@ const Wrap = styled.div`
   flex-direction: column;
 `;
 
-const Title = styled(H2)`
+const Title = styled(H1)`
   color: ${COLORS.TextLight};
+  margin-bottom: 8px;
 `;
 
-const Description = styled(P)`
+const Description = styled(H2)`
   color: ${COLORS.TextLight};
+  margin-bottom: 8px;
 `;
 
-const Carousel = styled(CarouselComponent)``;
+const Carousel = styled(CarouselComponent)`
+`;
 
 const Video = styled(VideoComponent)``;
 

@@ -41,8 +41,8 @@ const Title = styled(H1)`
 `;
 
 const ProfileImage = styled.img`
-  height: 180px;
-  width: 180px;
+  width: 212px;
+  height: auto;
   border: 1px solid ${COLORS.TextDark};
   -webkit-filter: contrast(120%), brightness(75%);
   filter: contrast(120%), brightness(75%);

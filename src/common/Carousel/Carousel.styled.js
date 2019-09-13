@@ -4,8 +4,8 @@ import { BREAK_POINTS } from "../../constants/BreakPoints";
 
 const Wrap = styled.div`
     width: 100%;
-    margin: 0 -5%;
-    padding: 0 5%;
+    margin: 0 -16px 0 0;
+    padding: 0 ;
     grid-column: 1 / -1;
     overflow-x: auto;
     white-space: nowrap;
@@ -18,7 +18,7 @@ const Wrap = styled.div`
     scroll-snap-type: x mandatory;
     @media ${BREAK_POINTS.laptopMin} {
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin: 0;
         padding: 0;
     }
@@ -33,8 +33,8 @@ const Slide = styled.div`
         padding-right: 7.5%;
     }
     @media ${BREAK_POINTS.laptopMin} {
-        margin: 16px;
-        min-width: 40%;
+        margin: 16px 16px 16px 0;
+        min-width: 30%;
         &:last-of-type {
         padding-right: 0;
         }
