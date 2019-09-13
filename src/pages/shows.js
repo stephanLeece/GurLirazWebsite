@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from 'gatsby';
 
 import AppWrapper from "../common/AppWrapper";
 import ShowsScreen from "../screens/Shows";

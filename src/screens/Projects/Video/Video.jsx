@@ -12,6 +12,7 @@ const Video = ({ youtubeId, className }) => {
         }}
       >
         <iframe
+          title={youtubeId}
           style={{
             position: "absolute",
             top: 0,

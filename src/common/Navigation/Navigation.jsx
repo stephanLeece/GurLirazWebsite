@@ -18,7 +18,7 @@ import {
 import HamburgerIcon from "./assets/hamburger.svg";
 import CloseIcon from "./assets/close.svg";
 
-import { H1, H3 } from "../Typography";
+import { H3 } from "../Typography";
 
 const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(

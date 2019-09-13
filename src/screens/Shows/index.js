@@ -1,4 +1,4 @@
-import { compose, withProps, branch, renderNothing } from "recompose";
+import { compose, withProps } from "recompose";
 import { dateHasPassed } from "../../utils/time";
 
 import Shows from "./Shows";
