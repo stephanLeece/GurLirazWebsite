@@ -1,7 +1,14 @@
 import React from "react";
 import Markdown from "markdown-to-jsx";
 
-import { Wrap, Title, TextBlock, Text, Image, SoundCloudWrap } from "./Home.styled";
+import {
+  Wrap,
+  Title,
+  TextBlock,
+  Text,
+  Image,
+  SoundCloudWrap
+} from "./Home.styled";
 
 const Home = ({ homeScreenData, imageUrls }) => (
   <Wrap>
@@ -29,7 +36,7 @@ const Home = ({ homeScreenData, imageUrls }) => (
         scrolling="no"
         frameborder="no"
         allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/859737146&color=%23a8a8a8&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/859737146&color=%23c0c0c0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       ></iframe>
     </SoundCloudWrap>
   </Wrap>
