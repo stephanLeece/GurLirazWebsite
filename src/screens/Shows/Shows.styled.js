@@ -9,12 +9,15 @@ const Wrap = styled.div`
 
 const ShowSection = styled.div`
   flex: 0 0 auto;
-  padding: 0 16px;
+  padding: 0 32px;
+  @media ${BREAK_POINTS.tabletMax} {
+    padding: 0 16px;
+  }
   max-width: 100%;
 `;
 
 const ImageBlock = styled.div`
-  margin-top: -48px;
+  margin: -48px 0;
   @media ${BREAK_POINTS.tabletMax} {
     display: none;
   }

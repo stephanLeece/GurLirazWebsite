@@ -25,7 +25,7 @@ const RootWrap = styled.div`
   width: 100%;
   display: flex;
   position: relative;
-  /* background: ${COLORS.BackgroundDark}; */
+  background: ${COLORS.BackgroundDark};
 `;
 
 const Nav = styled(Navigation)`
