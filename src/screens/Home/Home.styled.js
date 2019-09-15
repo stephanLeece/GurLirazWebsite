@@ -24,6 +24,7 @@ const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
   @media ${BREAK_POINTS.desktopMin} {
+    flex-direction: row;
     align-items: center;
     margin-bottom: 0px;
   }
