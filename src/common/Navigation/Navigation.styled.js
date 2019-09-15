@@ -28,8 +28,11 @@ const MenuButton = styled.div`
   align-items: center;
   transform: translateX(0%);
     transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     ${({ isOpen }) => isOpen && css`
         transform: translateX(-100%);
+        box-shadow: none;
+
     `};
   @media ${BREAK_POINTS.tabletMin} {
     display: none;
