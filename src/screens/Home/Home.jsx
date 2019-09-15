@@ -1,29 +1,27 @@
 import React from "react";
 import Markdown from "markdown-to-jsx";
 
-import {
-  Wrap,
-  Title,
-  MainText,
-  Image,
-  AdditionalText
-} from "./Home.styled";
+import { Wrap, Title, TextBlock, Text, Image } from "./Home.styled";
 
 const Home = ({ homeScreenData, imageUrls }) => (
   <Wrap>
     <Title>Gur Liraz</Title>
-    <MainText>
-      <Markdown>
-        {homeScreenData.mainDescription.childMarkdownRemark.html}
-      </Markdown>
-    </MainText>
-    <Image src={imageUrls[0]} />
-    <AdditionalText>
-      <Markdown>
-        {homeScreenData.additionalDescription.childMarkdownRemark.html}
-      </Markdown>
-    </AdditionalText>
+    <TextBlock>
+      <Text>
+        <Markdown>
+          {homeScreenData.mainDescription.childMarkdownRemark.html}
+        </Markdown>
+      </Text>
+      <Image src={imageUrls[0]} />
+    </TextBlock>
+    <TextBlock>
     <Image src={imageUrls[1]} />
+      <Text>
+        <Markdown>
+          {homeScreenData.additionalDescription.childMarkdownRemark.html}
+        </Markdown>
+      </Text>
+    </TextBlock>
   </Wrap>
 );
 

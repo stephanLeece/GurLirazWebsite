@@ -6,7 +6,7 @@ import { COLORS } from "../../constants/Colors";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 
 const Wrap = styled(GridWrap)`
-max-width: 100%;
+  max-width: 100%;
   > * {
     grid-column: 1 / -1;
     margin-bottom: 16px;
@@ -20,16 +20,40 @@ const Title = styled(H1)`
   }
 `;
 
-const MainText = styled(P)`
+const TextBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media ${BREAK_POINTS.desktopMin} {
+    align-items: center;
+    margin-bottom: 0px;
+  }
+`;
+
+const Text = styled(P)`
   color: ${COLORS.TextLight};
+  margin-bottom: 8px;
+  @media ${BREAK_POINTS.desktopMin} {
+    margin-bottom: 0px;
+  }
 `;
 
 const Image = styled.img`
- width: 100%;
+  width: 100%;
+  &:first-child {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-top: 16px;
+  }
+  @media ${BREAK_POINTS.desktopMin} {
+    width: 25%;
+    &:first-child {
+      margin-right: 16px;
+    }
+    &:last-child {
+      margin-left: 16px;
+    }
+  }
 `;
 
-const AdditionalText = styled(P)`
-  color: ${COLORS.TextLight};
-`;
-
-export { Wrap, Title, MainText, Image, AdditionalText };
+export { Wrap, Title, TextBlock, Text, Image };

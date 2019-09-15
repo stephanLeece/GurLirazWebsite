@@ -55,7 +55,7 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
       <MenuButton isOpen={isOpen} onClick={toggleMenu}>
         <Icon src={isOpen ? CloseIcon : HamburgerIcon} />
       </MenuButton>
-        <Title>Gur Liaz</Title>
+        <Title>Gur Liraz</Title>
         <ProfileImage src = {profilePhotoUrl} />
         <SubTitle>Guitarist | Composer</SubTitle>
       <PageLinksWrap>
