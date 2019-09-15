@@ -8,16 +8,20 @@ const Wrap = styled.div`
     padding: 16px;
 `;
 
+const DetailWrap = styled.div`
+   display: flex;
+   margin-bottom: 8px;
+   flex-wrap: wrap;
+`;
+
 const Date = styled(P)`
-    margin-bottom: 8px;
+    margin-right: 4px;
 `;
 
-const ShowName = styled(H4)`
-    margin-bottom: 8px;
-`;
+const Venue = styled(P)``;
 
-const Venue = styled(P)`
+const ShowName = styled(H4)``;
 
-`;
 
-export { Wrap, Date, ShowName, Venue  };
+
+export { Wrap, DetailWrap, Date, Venue, ShowName };

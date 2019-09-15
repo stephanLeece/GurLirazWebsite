@@ -23,10 +23,11 @@ const Title = styled(H1)`
 const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
   @media ${BREAK_POINTS.desktopMin} {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 0px;
+    margin-bottom: 32px;
   }
 `;
 
@@ -57,4 +58,6 @@ const Image = styled.img`
   }
 `;
 
-export { Wrap, Title, TextBlock, Text, Image };
+const SoundCloudWrap = styled.div``;
+
+export { Wrap, Title, TextBlock, Text, Image, SoundCloudWrap };
