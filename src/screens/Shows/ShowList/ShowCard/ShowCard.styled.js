@@ -16,11 +16,16 @@ const DetailWrap = styled.div`
 
 const Date = styled(P)`
     margin-right: 4px;
+    color: ${COLORS.TextMed};
 `;
 
-const Venue = styled(P)``;
+const Venue = styled(P)`
+    color: ${COLORS.TextMed};
+`;
 
-const ShowName = styled(H4)``;
+const ShowName = styled(H4)`
+    color: ${COLORS.TextMed};
+`;
 
 
 

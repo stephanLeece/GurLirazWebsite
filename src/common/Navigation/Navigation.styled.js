@@ -9,15 +9,18 @@ import SocialComponent from "./Social";
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background: ${COLORS.BackgroundLight};
+  justify-content: space-between;
+  background: ${COLORS.BackgroundMed};
   padding: 48px 24px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  @media ${BREAK_POINTS.tabletMax} {
+    padding: 24px 12px;
+  }
 `;
 
 const MenuButton = styled.div`
-  background: ${COLORS.BackgroundLight};
+  background: ${COLORS.BackgroundMed};
   height: 40px;
   width: 40px;
   position: absolute;
@@ -47,10 +50,14 @@ const Icon = styled.img`
 const Title = styled(H1)`
   text-align: center;
   color: ${COLORS.TextDark};
+  margin-bottom: 12px;
 `;
 
 const ProfileImage = styled.img`
-  width: 212px;
+  width: 200px;
+  @media ${BREAK_POINTS.tabletMax} {
+    width: 160px;
+  }
   height: auto;
   -webkit-filter: contrast(120%), brightness(75%);
   filter: contrast(120%), brightness(75%);
@@ -79,6 +86,7 @@ const PageLink = styled(TransitionLink)`
 const MailTo = styled.a`
   color: ${COLORS.TextDark};
   text-decoration: none;
+  margin-bottom: 8px;
   &:hover {
     color: ${COLORS.TextDark};
     opacity: 0.5;
@@ -89,6 +97,9 @@ const SocialWrap = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media ${BREAK_POINTS.tabletMax} {
+    padding: 0 8px;
+  }
 `;
 
 const Social = styled(SocialComponent)``;
