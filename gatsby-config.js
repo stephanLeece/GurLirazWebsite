@@ -22,13 +22,19 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Abel`,
+            family: `Abel`
           },
           {
-            family: `Manjari`,
-          },
-        ],
-      },
+            family: `Manjari`
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/favicons/favicon-32x32.png"
+      }
     }
   ]
 };
