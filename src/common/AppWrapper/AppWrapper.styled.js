@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const NAV_WIDTH_DESKTOP = 256;
+const NAV_WIDTH_DESKTOP = 300;
 
 const RootWrap = styled.div`
   min-height: 100vh;

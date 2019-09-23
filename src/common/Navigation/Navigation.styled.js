@@ -3,7 +3,7 @@ import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
-import { H1, H3 } from "../Typography";
+import { H1, H2 } from "../Typography";
 import SocialComponent from "./Social";
 
 const Wrap = styled.div`
@@ -63,7 +63,7 @@ const ProfileImage = styled.img`
   filter: contrast(120%), brightness(75%);
 `;
 
-const SubTitle = styled(H3)`
+const SubTitle = styled(H2)`
   text-align: center;
   color: ${COLORS.TextDark};
 `;
