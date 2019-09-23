@@ -48,6 +48,12 @@ const Text = styled(P)`
   @media ${BREAK_POINTS.desktopMin} {
     margin-bottom: 0px;
   }
+  a {
+    color: inherit;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 `;
 
 const Image = styled.img`

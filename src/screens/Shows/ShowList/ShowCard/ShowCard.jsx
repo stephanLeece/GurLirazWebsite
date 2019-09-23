@@ -9,7 +9,7 @@ const ShowCard = ({
 }) => (
     <Wrap className={className}>
     <DetailWrap>
-        <Date>{date && moment(date).format('MMM Do YYYY')} -</Date>
+        <Date>{date ? moment(date).format('MMM Do YYYY'): 'TBA'} -</Date>
         <Venue>{mainDetails}</Venue>
         </DetailWrap>
         <ShowName>{additionalDetails}</ShowName>
