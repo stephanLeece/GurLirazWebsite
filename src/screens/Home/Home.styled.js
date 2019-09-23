@@ -28,6 +28,17 @@ const TextBlock = styled.div`
     flex-direction: row;
     align-items: center;
     margin-bottom: 32px;
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      img {
+        margin-right: 16px;
+      }
+    }
+    &:nth-of-type(odd) {
+      img {
+        margin-left: 16px;
+      }
+    }
   }
 `;
 
@@ -49,12 +60,6 @@ const Image = styled.img`
   }
   @media ${BREAK_POINTS.desktopMin} {
     width: 25%;
-    &:first-child {
-      margin-right: 16px;
-    }
-    &:last-child {
-      margin-left: 16px;
-    }
   }
 `;
 

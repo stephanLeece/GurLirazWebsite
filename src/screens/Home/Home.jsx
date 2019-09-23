@@ -10,25 +10,21 @@ import {
   SoundCloudWrap
 } from "./Home.styled";
 
-const Home = ({ homeScreenData, imageUrls }) => (
+const Home = ({ homeScreenData: {
+  contentBlocks
+}, imageUrls }) => (
   <Wrap>
     <Title>Gur Liraz</Title>
+    {contentBlocks && contentBlocks.map(contentBlock => (
     <TextBlock>
-      <Text>
-        <Markdown>
-          {homeScreenData.mainDescription.childMarkdownRemark.html}
-        </Markdown>
-      </Text>
-      <Image src={imageUrls[0]} />
-    </TextBlock>
-    <TextBlock>
-      <Image src={imageUrls[1]} />
-      <Text>
-        <Markdown>
-          {homeScreenData.additionalDescription.childMarkdownRemark.html}
-        </Markdown>
-      </Text>
-    </TextBlock>
+    <Text>
+      <Markdown>
+        {contentBlock.text.childMarkdownRemark.html}
+      </Markdown>
+    </Text>
+    <Image src={contentBlock.image.file.url} />
+  </TextBlock>
+    ))}
     <SoundCloudWrap>
       <iframe
         width="100%"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
 import AppWrapper from "../common/AppWrapper";
@@ -7,10 +7,10 @@ import HomeScreen from "../screens/Home";
 
 const Home = props => (
   <AppWrapper location={props.location}>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Gur Liraz</title>
-        </Helmet>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Gur Liraz</title>
+    </Helmet>
     <HomeScreen
       homeScreenData={props.data.allContentfulAboutPage.edges[0].node}
     />
@@ -24,19 +24,17 @@ export const homePageQuery = graphql`
     allContentfulAboutPage {
       edges {
         node {
-          mainDescription {
-            childMarkdownRemark {
-              html
+          contentBlocks {
+            id
+            text {
+              childMarkdownRemark {
+                html
+              }
             }
-          }
-          photos {
-            file {
-              url
-            }
-          }
-          additionalDescription {
-            childMarkdownRemark {
-              html
+            image {
+              file {
+                url
+              }
             }
           }
         }
