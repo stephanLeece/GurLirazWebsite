@@ -15,7 +15,7 @@ export function monthsBetweenDates(fromDate, toDate) {
 }
 
 export function dateHasPassed(date) {
-    return moment().isAfter(moment(date).format('YYYY-MM-DD'));
+    return moment().subtract(1, 'd').isAfter(moment(date).format('YYYY-MM-DD'));
 }
 
 export function willBeBusinessDay(date) {
