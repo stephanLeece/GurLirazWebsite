@@ -1,10 +1,18 @@
 import React from "react";
 
-import { Wrap, Title, Description, Carousel, Video } from "./Project.styled";
+import {
+  Wrap,
+  Title,
+  Description,
+  Link,
+  LinkText,
+  Carousel,
+  Video
+} from "./Project.styled";
 
 const Project = ({
   className,
-  projectData: { title, description, videos }
+  projectData: { title, description, videos, projectWebsite }
 }) => {
   return (
     <Wrap className={className}>
@@ -14,6 +22,11 @@ const Project = ({
         {videos &&
           videos.map(video => <Video youtubeId={video.youtubeVideoId} />)}
       </Carousel>
+      {projectWebsite && (
+        <Link href={projectWebsite} target="_blank" rel="noopener noreferrer">
+          <LinkText>Visit Site</LinkText>
+        </Link>
+      )}
     </Wrap>
   );
 };

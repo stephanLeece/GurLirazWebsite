@@ -27,6 +27,7 @@ export const projectsQuery = graphql`
           projects {
             title
             description
+            projectWebsite
             videos {
               title
               youtubeVideoId
