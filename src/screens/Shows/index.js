@@ -21,7 +21,10 @@ const enhance = compose(
   }),
   withProps(({ photos }) => {
     return {
-      imageUrls: photos.map(photo => photo.file.url)
+      imageUrls: photos.map(photo => { return {
+        url: photo.file.url,
+        title: photo.title,
+      }})
     };
   })
 );

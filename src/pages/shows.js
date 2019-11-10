@@ -32,6 +32,7 @@ export const videoQuery = graphql`
       edges {
         node {
           photos {
+            title
             file {
               url
             }

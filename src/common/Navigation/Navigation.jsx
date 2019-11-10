@@ -53,10 +53,10 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
   return (
     <Wrap className={className}>
       <MenuButton isOpen={isOpen} onClick={toggleMenu}>
-        <Icon src={isOpen ? CloseIcon : HamburgerIcon} />
+        <Icon src={isOpen ? CloseIcon : HamburgerIcon} alt={isOpen ? "Close Menu" : "Open Menu"} />
       </MenuButton>
         <Title>Gur Liraz</Title>
-        <ProfileImage src = {profilePhotoUrl} />
+        <ProfileImage src={profilePhotoUrl} alt="A photo of Gur Liraz" />
         <SubTitle>Guitarist | Composer</SubTitle>
       <PageLinksWrap>
         <PageLink

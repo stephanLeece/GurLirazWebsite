@@ -22,7 +22,7 @@ const Home = ({ homeScreenData: {
         {contentBlock.text.childMarkdownRemark.html}
       </Markdown>
     </Text>
-    <Image src={contentBlock.image.file.url} />
+    <Image src={contentBlock.image.file.url} alt={contentBlock.image.title} />
   </TextBlock>
     ))}
     <SoundCloudWrap>

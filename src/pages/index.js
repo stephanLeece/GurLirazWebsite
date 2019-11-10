@@ -32,6 +32,7 @@ export const homePageQuery = graphql`
               }
             }
             image {
+              title
               file {
                 url
               }

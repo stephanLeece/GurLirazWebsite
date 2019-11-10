@@ -9,8 +9,8 @@ const Shows = ({ upcomingShows, pastShows, imageUrls }) => (
       <ShowList title="Past Shows" shows={pastShows} />
     </ShowListSection>
     <ImageSection>
-      {imageUrls.map(imageUrl => (
-        <Image src={imageUrl} />
+      {imageUrls.map(image => (
+        <Image src={image.url} alt={image.title} />
       ))}
     </ImageSection>
   </Wrap>
