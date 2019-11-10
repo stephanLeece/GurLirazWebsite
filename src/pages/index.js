@@ -10,6 +10,7 @@ const Home = props => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Gur Liraz</title>
+      <meta name="description" content="Guitarist | Composer. Guitar Lessons in Berlin" />
     </Helmet>
     <HomeScreen
       homeScreenData={props.data.allContentfulAboutPage.edges[0].node}
