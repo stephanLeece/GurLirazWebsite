@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { H1, P } from "../../common/Typography";
+import { H2, P } from "../../common/Typography";
 import GridWrap from "../../common/GridWrap";
 import { COLORS } from "../../constants/Colors";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
@@ -13,7 +13,8 @@ const Wrap = styled(GridWrap)`
   }
 `;
 
-const Title = styled(H1)`
+const Title = styled(H2)`
+  font-size: 48px;
   color: ${COLORS.TextLight};
   @media ${BREAK_POINTS.desktopMin} {
     display: none;

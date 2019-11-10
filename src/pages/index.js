@@ -10,6 +10,7 @@ const Home = props => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Gur Liraz</title>
+      <link rel="canonical" href="https://gurliraz.com/" />
       <meta name="description" content="Guitarist | Composer. Guitar Lessons in Berlin" />
     </Helmet>
     <HomeScreen
