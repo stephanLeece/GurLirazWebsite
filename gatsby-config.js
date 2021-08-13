@@ -20,14 +20,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Abel`
-          },
-          {
-            family: `Manjari`
-          }
-        ]
+        fonts: {
+          google: [
+            {
+              family: `Abel`
+            },
+            {
+              family: `Manjari`
+            }
+          ]
+        }
       }
     },
     {
