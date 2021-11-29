@@ -70,10 +70,4 @@ const Image = styled.img`
   }
 `;
 
-const SoundCloudWrap = styled.div`
-  @media ${BREAK_POINTS.desktopMin} {
-    width: 25%;
-  }
-`;
-
-export { Wrap, Title, TextBlock, Text, Image, SoundCloudWrap };
+export { Wrap, Title, TextBlock, Text, Image };
