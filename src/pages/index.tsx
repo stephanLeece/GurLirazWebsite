@@ -29,9 +29,8 @@ export const homePageQuery = graphql`
           contentBlocks {
             id
             text {
-              childMarkdownRemark {
-                html
-              }
+              id
+              text
             }
             image {
               title

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import { Link } from "gatsby";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
 import { H1, H2 } from "../Typography";
@@ -12,7 +12,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   background: ${COLORS.BackgroundMed};
   padding: 48px 24px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   @media ${BREAK_POINTS.tabletMax} {
     padding: 24px 12px;
   }
@@ -29,12 +29,13 @@ const MenuButton = styled.div`
   justify-content: center;
   align-items: center;
   transform: translateX(0%);
-    transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    ${({ isOpen }) => isOpen && css`
-        transform: translateX(-100%);
-        box-shadow: none;
-
+  transition: all 0.25s cubic-bezier(0.694, 0.0482, 0.335, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      transform: translateX(-100%);
+      box-shadow: none;
     `};
   @media ${BREAK_POINTS.tabletMin} {
     display: none;
@@ -69,7 +70,7 @@ const SubTitle = styled(H2)`
 
 const PageLinksWrap = styled.div``;
 
-const PageLink = styled.div`
+const PageLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,5 +115,5 @@ export {
   PageLink,
   MailTo,
   SocialWrap,
-  Social
+  Social,
 };

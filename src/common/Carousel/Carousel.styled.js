@@ -25,8 +25,8 @@ const Wrap = styled.div`
   @media ${BREAK_POINTS.laptopMin} {
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 32px;
-    padding: 0;
+    margin: 0;
+    padding: 0 32px;
   }
 `;
 
@@ -36,7 +36,7 @@ const Slide = styled.div`
   scroll-snap-align: center;
   margin: 16px 16px 16px 0;
   &:nth-last-child(2) {
-      margin: 16px 0;
+    margin: 16px 0;
   }
   @media ${BREAK_POINTS.laptopMin} {
     margin-right: 16px;
@@ -48,7 +48,7 @@ const Gap = styled.div`
   width: 0px;
   padding-left: 16px;
   &:first-child {
-      display: none;
+    display: none;
   }
   @media ${BREAK_POINTS.laptopMin} {
     display: none;

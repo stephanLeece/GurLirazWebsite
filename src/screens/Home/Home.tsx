@@ -10,7 +10,7 @@ const Home = ({ homeScreenData: { contentBlocks }, imageUrls }) => (
       contentBlocks.map((contentBlock) => (
         <TextBlock>
           <Text>
-            <Markdown>{contentBlock.text.childMarkdownRemark.html}</Markdown>
+            <Markdown>{contentBlock.text.text}</Markdown>
           </Text>
           <Image
             src={contentBlock.image.file.url}
