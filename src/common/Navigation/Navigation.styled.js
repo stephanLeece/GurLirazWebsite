@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import TransitionLink from "gatsby-plugin-transition-link";
 
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
@@ -70,7 +69,7 @@ const SubTitle = styled(H2)`
 
 const PageLinksWrap = styled.div``;
 
-const PageLink = styled(TransitionLink)`
+const PageLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

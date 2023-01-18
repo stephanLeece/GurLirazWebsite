@@ -9,7 +9,6 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-root-import",
     `gatsby-plugin-sass`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: "gatsby-source-contentful",
       options: {
