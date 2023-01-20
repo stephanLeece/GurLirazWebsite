@@ -48,7 +48,21 @@ const config: GatsbyConfig = {
       ],
       display: 'swap'
     }
-  }]
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: "Gur Liraz",
+      short_name: "Gur Liraz",
+      lang: `en`,
+      start_url: "/",
+      background_color: "#6b37bf",
+      theme_color: "#6b37bf",
+      display: "standalone",
+      icon: "src/favIcons/favicon-32x32.png",
+      crossOrigin: `use-credentials`,
+    },
+  },]
 };
 
 export default config;
