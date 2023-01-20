@@ -6,8 +6,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `gur-liraz`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Gur LIraz`,
+    siteUrl: `https://gurliraz.com/`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -38,6 +38,16 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  },
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        "Abel",
+        "Manjari"
+      ],
+      display: 'swap'
+    }
   }]
 };
 
