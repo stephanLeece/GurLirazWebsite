@@ -20,7 +20,7 @@ import CloseIcon from "./assets/close.svg";
 import { H3 } from "../Typography";
 
 interface NavigationProps {
-  className: string;
+  className?: string;
   toggleMenu: () => void;
   closeMenu: () => void;
   isOpen: boolean;

@@ -5,7 +5,12 @@ import { graphql } from "gatsby";
 import AppWrapper from "../common/AppWrapper";
 import HomeScreen from "../screens/Home";
 
-const Home = props => (
+interface PageProps {
+  location: string;
+  data: any;
+}
+
+const Home = (props: PageProps) => (
   <AppWrapper location={props.location}>
     <Helmet>
       <meta charSet="utf-8" />

@@ -4,7 +4,7 @@ import { Reset } from "styled-reset";
 import { GlobalStyle, RootWrap, Nav, PageWrap } from "./AppWrapper.styled";
 
 interface AppWrapperProps {
-  className: string;
+  className?: string;
   location: string;
   children: React.ReactNode;
 }
