@@ -2,7 +2,13 @@ import React from "react";
 
 import { Wrap, Title, Card } from "./ShowList.styled";
 
-const ShowList = ({ className, title, shows }) => (
+interface ShowListProps {
+    className?: string;
+    title: string;
+    shows: any[];
+}
+
+const ShowList = ({ className, title, shows }: ShowListProps) => (
     <Wrap className={className}>
         <Title>{title}</Title>
         {shows.map(show => <Card showDetails={show} />)}

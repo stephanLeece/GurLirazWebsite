@@ -3,7 +3,7 @@ import React from "react";
 import { Wrap } from './GridWrap.styles';
 
 interface GridWrapProps {
-  className: string;
+  className?: string;
   children: Array<React.ReactNode>;
 }
 

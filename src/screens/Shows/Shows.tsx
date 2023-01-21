@@ -10,7 +10,11 @@ import {
 
 import { dateHasPassed } from "../../utils/time";
 
-const getShowDetails = ({ rawShows: { edges } }) => {
+interface ShowsProps {
+  rawShows: any; photos: any;
+}
+
+const getShowDetails = ({ rawShows: { edges } }: any) => {
   const upcomingShows = [];
   const pastShows = [];
   for (var i = 0; i < edges.length; i++) {
@@ -26,7 +30,7 @@ const getShowDetails = ({ rawShows: { edges } }) => {
   };
 };
 
-const getImageUrls = ({ photos }) => {
+const getImageUrls = ({ photos }: { photos: Array<{ file: { url: string }, title: string }> }) => {
   return {
     imageUrls: photos.map((photo) => {
       return {
@@ -37,7 +41,7 @@ const getImageUrls = ({ photos }) => {
   };
 };
 
-const Shows = ({ rawShows, photos }) => {
+const Shows = ({ rawShows, photos }: ShowsProps) => {
   const { upcomingShows, pastShows } = getShowDetails({ rawShows });
   const { imageUrls } = getImageUrls({ photos });
   return (
@@ -47,7 +51,7 @@ const Shows = ({ rawShows, photos }) => {
         <ShowList title="Past Shows" shows={pastShows} />
       </ShowListSection>
       <ImageSection>
-        {imageUrls.map((image) => (
+        {imageUrls.map((image: { url: string, title: string }) => (
           <Image src={image.url} alt={image.title} />
         ))}
       </ImageSection>
