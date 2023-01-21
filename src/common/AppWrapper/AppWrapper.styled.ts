@@ -1,8 +1,8 @@
 import styled, { createGlobalStyle, css } from "styled-components";
-import PageTransitionWrapper from "../PageTransitionWrapper";
 import Navigation from "../Navigation";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
+import PageTransitionWraper from "../PageTransitionWrapper";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -39,14 +39,16 @@ const Nav = styled(Navigation)`
   width: ${NAV_WIDTH_DESKTOP}px;
   @media ${BREAK_POINTS.mobileMax} {
     transform: translateX(-100%);
-    transition: all 0.25s cubic-bezier(.694, .0482, .335, 1);
-    ${({ isOpen }) => isOpen && css`
+    transition: all 0.25s cubic-bezier(0.694, 0.0482, 0.335, 1);
+    ${({ isOpen }) =>
+      isOpen &&
+      css`
         transform: translateX(0);
-    `};
+      `};
   }
 `;
 
-const PageTransitionWrap = styled(PageTransitionWrapper)`
+const PageWrap = styled(PageTransitionWraper)`
   margin-left: 0;
   padding: 48px 0;
   width: 100%;
@@ -55,4 +57,4 @@ const PageTransitionWrap = styled(PageTransitionWrapper)`
   }
 `;
 
-export { GlobalStyle, RootWrap, Nav, PageTransitionWrap };
+export { GlobalStyle, RootWrap, Nav, PageWrap };

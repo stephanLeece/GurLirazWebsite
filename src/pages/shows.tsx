@@ -5,12 +5,17 @@ import { graphql } from 'gatsby';
 import AppWrapper from "../common/AppWrapper";
 import ShowsScreen from "../screens/Shows";
 
-const Shows = props => (
+interface PageProps {
+  location: string;
+  data: any;
+}
+
+const Shows = (props: PageProps) => (
   <AppWrapper location={props.location}>
-      <Helmet>
-          <meta charSet="utf-8" />
-          <title>Shows</title>
-        </Helmet>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Shows</title>
+    </Helmet>
     <ShowsScreen rawShows={props.data.allContentfulShow} photos={props.data.allContentfulShowPageContent.edges[0].node.photos} />
   </AppWrapper>
 );
@@ -18,27 +23,27 @@ const Shows = props => (
 export default Shows;
 
 export const videoQuery = graphql`
-  query ShowQuery {
-    allContentfulShow(sort: { fields: [date], order: DESC }) {
-      edges {
-        node {
-          mainDetails
-          additionalDetails
-          date
-        }
+query ShowQuery {
+  allContentfulShow(sort: {date: DESC}) {
+    edges {
+      node {
+        mainDetails
+        additionalDetails
+        date
       }
     }
-    allContentfulShowPageContent {
-      edges {
-        node {
-          photos {
-            title
-            file {
-              url
-            }
+  }
+  allContentfulShowPageContent {
+    edges {
+      node {
+        photos {
+          title
+          file {
+            url
           }
         }
       }
     }
   }
+}
 `;
