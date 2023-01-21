@@ -3,7 +3,13 @@ import { Reset } from "styled-reset";
 
 import { GlobalStyle, RootWrap, Nav, PageWrap } from "./AppWrapper.styled";
 
-const Layout = (props) => {
+interface AppWrapperProps {
+  className: string;
+  location: string;
+  children: React.ReactNode;
+}
+
+const AppWrapper = (props: AppWrapperProps) => {
   const [isMenuOpen, toggleMenuOpen] = useState(false);
   return (
     <React.Fragment>
@@ -22,4 +28,4 @@ const Layout = (props) => {
   );
 };
 
-export default Layout;
+export default AppWrapper;

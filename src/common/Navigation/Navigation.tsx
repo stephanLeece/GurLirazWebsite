@@ -15,12 +15,18 @@ import {
   Social
 } from "./Navigation.styled";
 
-import HamburgerIcon from "./assets/hamburger.svg";
+import HamburgerIcon from "./assets/hamburger.svg"
 import CloseIcon from "./assets/close.svg";
-
 import { H3 } from "../Typography";
 
-const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
+interface NavigationProps {
+  className: string;
+  toggleMenu: () => void;
+  closeMenu: () => void;
+  isOpen: boolean;
+}
+
+const Navigation = ({ className, toggleMenu, closeMenu, isOpen }: NavigationProps) => {
   const { allContentfulAboutPage: navContent } = useStaticQuery(
     graphql`
       query NavigationQuery {
@@ -55,9 +61,9 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
       <MenuButton isOpen={isOpen} onClick={toggleMenu}>
         <Icon src={isOpen ? CloseIcon : HamburgerIcon} alt={isOpen ? "Close Menu" : "Open Menu"} />
       </MenuButton>
-        <Title>Gur Liraz</Title>
-        <ProfileImage src={profilePhotoUrl} alt="A photo of Gur Liraz" />
-        <SubTitle>Guitarist | Composer</SubTitle>
+      <Title>Gur Liraz</Title>
+      <ProfileImage src={profilePhotoUrl} alt="A photo of Gur Liraz" />
+      <SubTitle>Guitarist | Composer</SubTitle>
       <PageLinksWrap>
         <PageLink
           onClick={closeMenu}
@@ -88,7 +94,7 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }) => {
         <H3>gurliraz@gmail.com</H3>
       </MailTo>
       <SocialWrap>
-        {socialLinks.map(link => (
+        {socialLinks.map((link: any) => (
           <Social linkData={link} />
         ))}
       </SocialWrap>

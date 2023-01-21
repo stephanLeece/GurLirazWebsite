@@ -2,7 +2,12 @@ import React from "react";
 import { TransitionState } from "gatsby-plugin-transition-link";
 import { motion } from "framer-motion";
 
-const PageTransitionWrapper = ({ children, className }) => {
+interface PageTransitionWrapperProps {
+    className?: string;
+    children: React.ReactNode;
+}
+
+const PageTransitionWrapper = ({ className, children }: PageTransitionWrapperProps) => {
     const variants = {
         hidden: { x: "100%" },
         visible: { x: "0%" }

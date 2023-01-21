@@ -18,7 +18,7 @@ const Wrap = styled.div`
   }
 `;
 
-const MenuButton = styled.div`
+const MenuButton = styled.div<{ isOpen: boolean }>`
   background: ${COLORS.BackgroundMed};
   height: 40px;
   width: 40px;
@@ -31,7 +31,7 @@ const MenuButton = styled.div`
   transform: translateX(0%);
   transition: all 0.25s cubic-bezier(0.694, 0.0482, 0.335, 1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  ${({ isOpen }) =>
+  ${({ isOpen }: { isOpen: boolean }) =>
     isOpen &&
     css`
       transform: translateX(-100%);
