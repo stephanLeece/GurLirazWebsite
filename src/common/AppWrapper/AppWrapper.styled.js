@@ -2,6 +2,7 @@ import styled, { createGlobalStyle, css } from "styled-components";
 import Navigation from "../Navigation";
 import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
+import PageTransitionWraper from "../PageTransitionWrapper";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -47,7 +48,7 @@ const Nav = styled(Navigation)`
   }
 `;
 
-const PageWrap = styled.div`
+const PageWrap = styled(PageTransitionWraper)`
   margin-left: 0;
   padding: 48px 0;
   width: 100%;
