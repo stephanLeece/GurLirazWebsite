@@ -62,7 +62,20 @@ const config: GatsbyConfig = {
         icon: "src/favIcons/favicon-32x32.png",
         crossOrigin: `use-credentials`,
       },
-    },]
+    },
+    {
+      resolve: 'gatsby-plugin-contentful-optional-fields',
+      options: {
+        optionalFields: {
+          ContentfulRelease: {
+            shortDescription: 'String',
+            longDescription: 'String',
+            purchaseLink: 'String',
+            streamingLink: 'String',
+          }
+        }
+      }
+    }]
 };
 
 export default config;

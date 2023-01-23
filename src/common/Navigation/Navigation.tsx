@@ -89,6 +89,14 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }: NavigationProp
         >
           <H3>Projects</H3>
         </PageLink>
+        <PageLink
+          onClick={closeMenu}
+          to="/releases"
+          enter={{ length: 0.5 }}
+          exit={{ length: 0.5 }}
+        >
+          <H3>Releases</H3>
+        </PageLink>
       </PageLinksWrap>
       <MailTo href="mailto: gurliraz@gmail.com">
         <H3>gurliraz@gmail.com</H3>

@@ -5604,6 +5604,11 @@ gatsby-parcel-config@1.4.0:
     "@parcel/transformer-js" "2.8.2"
     "@parcel/transformer-json" "2.8.2"
 
+gatsby-plugin-contentful-optional-fields@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-contentful-optional-fields/-/gatsby-plugin-contentful-optional-fields-2.2.2.tgz#9ed81e7e47f13c0a014b04ed06bd3c82ce32df7e"
+  integrity sha512-ywMy04iFM6h13vky3//Gi53Xkp9LxK+Ne123Sl2hChgaEB2KAr7Zt2zUZrH2qiYM7DAvwLKSIU4273L2DjjJow==
+
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"

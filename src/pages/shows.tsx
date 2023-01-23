@@ -22,7 +22,7 @@ const Shows = (props: PageProps) => (
 
 export default Shows;
 
-export const videoQuery = graphql`
+export const showQuery = graphql`
 query ShowQuery {
   allContentfulShow(sort: {date: DESC}) {
     edges {
