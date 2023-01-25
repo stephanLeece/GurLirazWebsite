@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 import { H2, H3, P } from "../../../common/Typography";
-import CarouselComponent from "../../../common/Carousel";
 import { COLORS } from "../../../constants/Colors";
 import { BREAK_POINTS } from "../../../constants/BreakPoints";
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   @media ${BREAK_POINTS.desktopMin} {
     flex-direction: row;
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    } 
   }
 `;
 
@@ -46,6 +47,14 @@ const LinkText = styled(P)``;
 const TextWrap = styled.div`
 display: flex;
 flex-direction: column;
+@media ${BREAK_POINTS.desktopMin} {
+    width: 25%;
+    margin-left: 16px;
+    &:nth-child(even) {
+      margin-right: 16px;
+      margin-left: 0;
+    } 
+  }
 `;
 
 const Image = styled.img`
@@ -55,6 +64,10 @@ max-width: 100%;
     width: 25%;
     margin-right: 16px;
     margin-bottom: 0;
+    &:nth-child(even) {
+      margin-left: 16px;
+      margin-right: 0;
+    } 
   }
 `;
 
