@@ -47,7 +47,7 @@ const Release = ({
         <LinksWrap>
           {purchaseLink && (
             <Link href={purchaseLink} target="_blank" rel="noopener noreferrer">
-              <Button>Purchase</Button>
+              <Button>purchase</Button>
             </Link>
           )}
           {streamingLink && (

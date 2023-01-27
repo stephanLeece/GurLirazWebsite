@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import { BREAK_POINTS } from "../../constants/BreakPoints";
 import { COLORS } from "../../constants/Colors";
 
 const Wrap = styled.button` 

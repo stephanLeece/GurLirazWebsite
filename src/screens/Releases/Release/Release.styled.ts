@@ -31,15 +31,17 @@ const LongDescription = styled(P)`
 `;
 
 const Link = styled.a`
-  color: ${COLORS.TextLight};
   &:hover {
-    color: ${COLORS.TextLight};
     opacity: 0.5;
+  }
+  &:first-child {
+    margin-right: 32px;
   }
 `;
 
 const LinksWrap = styled.div`
   display: flex;
+  margin-top: auto;
 `;
 
 const TextWrap = styled.div`
