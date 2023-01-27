@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../../common/Button";
 
 import {
   Wrap,
@@ -8,7 +9,6 @@ import {
   LongDescription,
   LinksWrap,
   Link,
-  LinkText,
   Image,
 } from "./Release.styled";
 
@@ -47,12 +47,12 @@ const Release = ({
         <LinksWrap>
           {purchaseLink && (
             <Link href={purchaseLink} target="_blank" rel="noopener noreferrer">
-              <LinkText>Purchase</LinkText>
+              <Button>Purchase</Button>
             </Link>
           )}
           {streamingLink && (
             <Link href={streamingLink} target="_blank" rel="noopener noreferrer">
-              <LinkText>stream</LinkText>
+              <Button>stream</Button>
             </Link>
           )}
         </LinksWrap>

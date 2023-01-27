@@ -42,8 +42,6 @@ const LinksWrap = styled.div`
   display: flex;
 `;
 
-const LinkText = styled(P)``;
-
 const TextWrap = styled.div`
 display: flex;
 flex-direction: column;
@@ -71,4 +69,4 @@ max-width: 100%;
   }
 `;
 
-export { Wrap, TextWrap, Title, Description, LongDescription, LinksWrap, Link, LinkText, Image };
+export { Wrap, TextWrap, Title, Description, LongDescription, LinksWrap, Link, Image };
