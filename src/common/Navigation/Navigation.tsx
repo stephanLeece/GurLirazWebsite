@@ -83,6 +83,14 @@ const Navigation = ({ className, toggleMenu, closeMenu, isOpen }: NavigationProp
         </PageLink>
         <PageLink
           onClick={closeMenu}
+          to="/releases"
+          enter={{ length: 0.5 }}
+          exit={{ length: 0.5 }}
+        >
+          <H3>Releases</H3>
+        </PageLink>
+        <PageLink
+          onClick={closeMenu}
           to="/projects"
           enter={{ length: 0.5 }}
           exit={{ length: 0.5 }}
